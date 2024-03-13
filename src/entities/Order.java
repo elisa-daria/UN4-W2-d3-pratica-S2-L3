@@ -2,6 +2,7 @@ package entities;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Random;
 
 public class Order {
     //attributes
@@ -53,7 +54,8 @@ public class Order {
     //setters
 
     public void setId(long id) {
-        this.id = id;
+        Random rdm=new Random();
+        this.id = rdm.nextInt(1,1001);
     }
 
     public void setStatus(String status) {
@@ -79,4 +81,15 @@ public class Order {
 
     //methods
 
+    @Override
+    public String toString() {
+        return "Order{" +
+                "id=" + id +
+                ", status='" + status + '\'' +
+                ", orderDate=" + orderDate +
+                ", deliveryDate=" + deliveryDate +
+                ", customer=" + customer +
+                ", products=" + products +
+                '}';
+    }
 }

@@ -54,4 +54,14 @@ public class Product {
     }
 
     //methods
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", category='" + category + '\'' +
+                ", price=" + price +
+                '}';
+    }
 }
